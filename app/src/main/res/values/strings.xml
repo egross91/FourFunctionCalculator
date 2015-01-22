@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FourFunctionCalculator</string>
+    <string name="now_ya_see_me_now_ya_dont">You should never see me!!! D:</string>
+    <string name="suffix_singular">tiger</string>
+    <string name="suffix_plural">tigers</string>
+    <string name="zero">0</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="decimal">.</string>
+    <string name="add_operand">+</string>
+    <string name="subtract_operand">-</string>
+    <string name="multiply_operand">*</string>
+    <string name="divide_operand">/</string>
+    <string name="equal_sign">=</string>
+    <string name="backspace">←</string>
+    <string name="clear">C</string>
+    <string name="divide_by_zero_toast">Can\'t do that, bruh</string>
+    <string name="action_settings">Settings</string>
+
+</resources>
