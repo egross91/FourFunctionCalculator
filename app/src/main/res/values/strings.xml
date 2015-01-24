@@ -21,7 +21,7 @@
     <string name="multiply_operand">*</string>
     <string name="divide_operand">/</string>
     <string name="equal_sign">=</string>
-    <string name="backspace">←</string>
+    <string name="backspace">Back</string>
     <string name="clear">C</string>
     <string name="divide_by_zero_toast">Can\'t do that, bruh</string>
     <string name="action_settings">Settings</string>

@@ -33,105 +33,93 @@
         android:gravity="center_vertical"
         android:layout_gravity="center_horizontal"
         >
+
         <TableRow
             android:gravity="center"
-            android:layout_height="55dip"
-            android:layout_width="55dip"
+            android:layout_height="52dip"
+            android:layout_width="52dip"
             >
+
             <Button
-                android:id="@+id/buttonBackspace"
-                android:layout_span="2"
-                android:layout_height="55dip"
-                android:layout_width="55dip"
-                android:text="@string/backspace"
-                android:onClick="clickButtonBackspaceHandler" />
+                android:id="@+id/buttonSeven"
+                android:layout_width="52dip"
+                android:layout_height="52dip"
+                android:text="@string/seven"
+                android:onClick="clickButtonNumberHandler" />
+
+            <Button
+                android:id="@+id/buttonEight"
+                android:layout_width="52dip"
+                android:layout_height="52dip"
+                android:text="@string/eight"
+                android:onClick="clickButtonNumberHandler" />
+
+            <Button
+                android:id="@+id/buttonNine"
+                android:layout_width="52dip"
+                android:layout_height="52dip"
+                android:text="@string/nine"
+                android:onClick="clickButtonNumberHandler" />
+
             <Button
                 android:id="@+id/buttonEqual"
-                android:layout_width="55dip"
-                android:layout_height="55dip"
+                android:layout_width="52dip"
+                android:layout_height="52dip"
                 android:text="@string/equal_sign"
                 android:onClick="clickButtonEqualHandler" />
             <Button
                 android:id="@+id/buttonClear"
                 style="?android:attr/buttonStyleSmall"
-                android:layout_width="55dip"
-                android:layout_height="55dip"
+                android:layout_width="52dip"
+                android:layout_height="52dip"
                 android:text="@string/clear"
                 android:onClick="clickButtonClearHandler" />
         </TableRow>
 
         <TableRow
             android:gravity="center"
-            android:layout_height="55dip"
-            android:layout_width="55dip"
-            >
-            <Button
-                android:id="@+id/buttonSeven"
-                android:layout_width="55dip"
-                android:layout_height="55dip"
-                android:text="@string/seven"
-                android:onClick="clickButtonNumberHandler" />
-
-            <Button
-                android:id="@+id/buttonEight"
-                android:layout_width="55dip"
-                android:layout_height="55dip"
-                android:text="@string/eight"
-                android:onClick="clickButtonNumberHandler" />
-
-            <Button
-                android:id="@+id/buttonNine"
-                android:layout_width="55dip"
-                android:layout_height="55dip"
-                android:text="@string/nine"
-                android:onClick="clickButtonNumberHandler" />
-
-            <Button
-                android:id="@+id/buttonAddOperand"
-                android:layout_width="55dip"
-                android:layout_height="55dip"
-                android:text="@string/add_operand"
-                android:onClick="clickButtonOperatorsHandler" />
-        </TableRow>
-
-        <TableRow
-            android:gravity="center"
-            android:layout_height="55dip"
-            android:layout_width="55dip"
+            android:layout_height="52dip"
+            android:layout_width="52dip"
             >
             <Button
                 android:id="@+id/buttonFour"
                 style="?android:attr/buttonStyleSmall"
-                android:layout_width="55dip"
-                android:layout_height="55dip"
+                android:layout_width="52dip"
+                android:layout_height="52dip"
                 android:text="@string/four"
                 android:onClick="clickButtonNumberHandler"/>
 
             <Button
                 android:id="@+id/buttonFive"
                 style="?android:attr/buttonStyleSmall"
-                android:layout_width="55dip"
-                android:layout_height="55dip"
+                android:layout_width="52dip"
+                android:layout_height="52dip"
                 android:text="@string/five"
                 android:onClick="clickButtonNumberHandler" />
 
             <Button
                 android:id="@+id/buttonSix"
                 style="?android:attr/buttonStyleSmall"
-                android:layout_width="55dip"
-                android:layout_height="55dip"
+                android:layout_width="52dip"
+                android:layout_height="52dip"
                 android:text="@string/six"
                 android:onClick="clickButtonNumberHandler" />
 
             <Button
+                android:id="@+id/buttonAddOperand"
+                android:layout_width="52dip"
+                android:layout_height="52dip"
+                android:text="@string/add_operand"
+                android:onClick="clickButtonOperatorsHandler" />
+
+            <Button
                 android:id="@+id/buttonSubtract"
                 style="?android:attr/buttonStyleSmall"
-                android:layout_width="55dip"
-                android:layout_height="55dip"
+                android:layout_width="52dip"
+                android:layout_height="52dip"
                 android:text="@string/subtract_operand"
                 android:singleLine="false"
                 android:onClick="clickButtonOperatorsHandler" />
-
         </TableRow>
 
         <TableRow
@@ -141,46 +129,51 @@
             >
             <Button
                 android:id="@+id/buttonOne"
-                android:layout_width="55dip"
-                android:layout_height="55dip"
+                android:layout_width="52dip"
+                android:layout_height="52dip"
                 android:text="@string/one"
                 android:onClick="clickButtonNumberHandler" />
 
             <Button
                 android:id="@+id/buttonTwo"
                 style="?android:attr/buttonStyleSmall"
-                android:layout_width="55dip"
-                android:layout_height="55dip"
+                android:layout_width="52dip"
+                android:layout_height="52dip"
                 android:text="@string/two"
                 android:onClick="clickButtonNumberHandler" />
 
             <Button
                 android:id="@+id/buttonThree"
                 style="?android:attr/buttonStyleSmall"
-                android:layout_width="55dip"
-                android:layout_height="55dip"
+                android:layout_width="52dip"
+                android:layout_height="52dip"
                 android:text="@string/three"
                 android:onClick="clickButtonNumberHandler" />
 
             <Button
                 android:id="@+id/buttonMultiply"
                 style="?android:attr/buttonStyleSmall"
-                android:layout_width="55dip"
-                android:layout_height="55dip"
+                android:layout_width="52dip"
+                android:layout_height="52dip"
                 android:text="@string/multiply_operand"
                 android:singleLine="false"
+                android:onClick="clickButtonOperatorsHandler" />
+
+            <Button
+                android:id="@+id/buttonDivide"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="52dip"
+                android:layout_height="52dip"
+                android:text="@string/divide_operand"
                 android:onClick="clickButtonOperatorsHandler" />
         </TableRow>
 
         <TableRow
-            android:gravity="center"
-            android:layout_width="55dip"
-            android:layout_height="55dip"
-            >
+            android:gravity="center">
             <Button
                 android:id="@+id/buttonZero"
-                android:layout_width="55dip"
-                android:layout_height="55dip"
+                android:layout_width="52dip"
+                android:layout_height="52dip"
                 android:layout_span="2"
                 android:text="@string/zero"
                 android:onClick="clickButtonNumberHandler" />
@@ -188,18 +181,18 @@
             <Button
                 android:id="@+id/buttonDecimal"
                 style="?android:attr/buttonStyleSmall"
-                android:layout_width="55dip"
-                android:layout_height="55dip"
+                android:layout_width="52dip"
+                android:layout_height="52dip"
                 android:text="@string/decimal"
                 android:onClick="clickButtonDecimalHandler" />
 
             <Button
-                android:id="@+id/buttonDivide"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="55dip"
-                android:layout_height="55dip"
-                android:text="@string/divide_operand"
-                android:onClick="clickButtonOperatorsHandler" />
+                android:id="@+id/buttonBackspace"
+                android:layout_span="2"
+                android:layout_height="52dip"
+                android:layout_width="52dip"
+                android:text="@string/backspace"
+                android:onClick="clickButtonBackspaceHandler" />
         </TableRow>
     </TableLayout>
 </LinearLayout>

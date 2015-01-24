@@ -11,6 +11,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.math.BigDecimal;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -93,10 +95,8 @@ public class MainActivity extends ActionBarActivity {
             return;
         }
         else if (this.mClickedOperator) {
-            setOperandsAndOperator(this.mLeftOperand.toString(),
-                    this.mOperator,
-                    calculate(this.mLeftOperand, this.mOperator, new BigDecimal(this.mCurrentOperand.toString())),
-                    false);
+            setOperandsAndOperator(this.mLeftOperand.toString(), this.mOperator,
+                    calculate(this.mLeftOperand, this.mOperator, new BigDecimal(this.mCurrentOperand.toString())), false);
         }
 
         setOperandsAndOperator("0", ' ', this.mCurrentOperand, false);
@@ -139,18 +139,21 @@ public class MainActivity extends ActionBarActivity {
     /** Helper Methods **/
     private void updateCalculatorDisplay() {
         // Set the LittleTextView.
+        CharSequence left = formatNumber(this.mLeftOperand.toString());
+        CharSequence right = formatNumber(this.mCurrentOperand);
+
         if (this.mClickedOperator) {
-            this.mLeftOperandTextRepresentation.setText(this.mLeftOperand.toString() + " " + this.mOperator);
+            this.mLeftOperandTextRepresentation.setText(left.toString() + " " + this.mOperator);
         }
         else {
-            this.mLeftOperandTextRepresentation.setText(this.mLeftOperand.toString());
+            this.mLeftOperandTextRepresentation.setText(left.toString());
         }
 
-        this.mInputTextRepresentation.setText(this.mCurrentOperand.toString());
+        this.mInputTextRepresentation.setText(right.toString());
     }
 
     private String calculate(BigDecimal left, char operator, BigDecimal right) {
-        BigDecimal result = null;
+        BigDecimal result;
         switch (operator) {
             case '+':
                 result =  left.add(right);
@@ -162,7 +165,7 @@ public class MainActivity extends ActionBarActivity {
                 result = left.multiply(right);
                 break;
             case '/':
-                result = left.divide(right, 5, BigDecimal.ROUND_HALF_UP);
+                result = left.divide(right, 7, BigDecimal.ROUND_HALF_UP);
                 break;
             default:
                 result = BigDecimal.ZERO;
@@ -199,6 +202,17 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return false;
+    }
+
+    private CharSequence formatNumber(CharSequence seq) {
+        BigDecimal value = new BigDecimal(seq.toString());
+        DecimalFormat formatter = new DecimalFormat("1.####E0");
+
+        if (seq.length() < 24) {
+            return seq;
+        }
+
+        return formatter.format(value);
     }
     /** END HELPER METHOD **/
 }
